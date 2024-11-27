@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "980536009790",
+    "project_id": "connect-guide-ffbe8",
+    "storage_bucket": "connect-guide-ffbe8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980536009790:android:76d2a50dc0d5f49f939d6f",
+        "android_client_info": {
+          "package_name": "com.example.connect_guide"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6THECbMnwbl0eaXw_VsedfHLX9kChTjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
