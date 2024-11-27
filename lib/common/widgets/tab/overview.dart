@@ -209,8 +209,22 @@ class _OverViewState extends State<OverView> {
 
   @override
   Widget build(BuildContext context) {
+    // final photos = widget.business.photos ?? [];
+    // final List<Widget> photoWidgets = photos.isNotEmpty
+    //     ? photos
+    //         .map<Widget>((photoUrl) => Image.network(
+    //               photoUrl,
+    //               fit: BoxFit.cover,
+    //               width: 100,
+    //               height: 100,
+    //               errorBuilder: (context, error, stackTrace) =>
+    //                   const Icon(Icons.error, size: 100),
+    //             ))
+    //         .toList()
+    //     : [Image.asset('assets/images/company.jpg', width: 100, height: 100)];
+
     final photos = widget.business.photos ?? [];
-    final List<Widget> photoWidgets = photos.isNotEmpty
+    final List<Widget> photoWidgets = (photos is List)
         ? photos
             .map<Widget>((photoUrl) => Image.network(
                   photoUrl,
@@ -221,7 +235,16 @@ class _OverViewState extends State<OverView> {
                       const Icon(Icons.error, size: 100),
                 ))
             .toList()
-        : [Image.asset('assets/images/company.jpg', width: 100, height: 100)];
+        : [
+            Image.network(
+              photos,
+              fit: BoxFit.cover,
+              width: 100,
+              height: 100,
+              errorBuilder: (context, error, stackTrace) =>
+                  const Icon(Icons.error, size: 100),
+            )
+          ];
 
     return Padding(
       padding: const EdgeInsets.all(16.0),

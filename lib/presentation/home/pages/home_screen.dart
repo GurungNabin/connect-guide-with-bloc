@@ -164,8 +164,7 @@
 //   }
 // }
 
-
-// latitude and longitude 
+// latitude and longitude
 import 'package:connect_guide/data/models/auth/user.dart';
 import 'package:connect_guide/presentation/auth/pages/signin.dart';
 import 'package:connect_guide/presentation/home/bloc/location/location_cubit.dart';
